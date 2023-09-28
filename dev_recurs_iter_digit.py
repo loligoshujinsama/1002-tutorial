@@ -1,6 +1,7 @@
 #!usr/bin/env/python
 import sys
 
+#Base case added on 1:55AM 29/09/2023, in the case of digit_i(1). It should return a 1.
 def digit_i(x):
     c = 1
     if x < 10:
