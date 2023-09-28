@@ -3,13 +3,16 @@ import sys
 
 def digit_i(x):
     c = 1
-    while True:
-        x = x//10
-        if x <10:
-            c += 1
-            break
-        else:
-            c += 1
+    if x < 10:
+        return 1
+    else:
+        while True:
+            x = x//10
+            if x <10:
+                c += 1
+                break
+            else:
+                c += 1
     return c
 
 def digit_r(x):
