@@ -1,8 +1,7 @@
 #!usr/bin/env/python
-
+import sys
 def elfish(x , elf = ['e','f','l']):
     x=x.lower()
-    
     try:
         if x[0] in elf:
             elf.remove(x[0])
@@ -12,5 +11,6 @@ def elfish(x , elf = ['e','f','l']):
             return "it is not elfish"
         else:
             return "it is elfish"
-    
-print(elfish("Waffles"))
+
+a = sys.argv[1]
+print(elfish(a))
