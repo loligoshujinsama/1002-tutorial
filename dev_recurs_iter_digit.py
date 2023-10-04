@@ -3,7 +3,7 @@ import sys
 
 #Base case added on 1:55AM 29/09/2023, in the case of digit_i(1). It should return a 1.
 def digit_i(x):
-    c = 1
+    c = 0
     if x < 10:
         return 1
     else:
