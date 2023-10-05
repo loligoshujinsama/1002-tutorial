@@ -5,8 +5,7 @@ def scale(list1, x):
     scaled=[]
     for i in list1:
         i*=x
-        i = int(i)
-        scaled.append(i)
+        scaled.append(int(i))
     return scaled
 
 def sort(list1):
