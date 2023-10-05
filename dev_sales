@@ -1,0 +1,43 @@
+#!usr/bin/env/python
+import sys
+
+def scale(list1, x):
+    scaled=[]
+    for i in list1:
+        i*=x
+        i = int(i)
+        scaled.append(i)
+    return scaled
+
+def sort(list1):
+    sorted_list = sorted(list1, key=lambda n: n%10, reverse=False)
+    return sorted_list
+
+def goodSales(list1):
+    good = []
+    avg = 0
+    total = 0
+    for i in list1:
+        total += i 
+    avg = total/len(list1)
+    for i in list1:
+        if i > avg:
+            good.append(i)
+    return good
+
+
+if __name__ == "__main__":
+    try:
+        list1_1 = sys.argv[1]
+        x = float(sys.argv[2])
+
+        #Split the commas and make it a list
+        #Convert all elements into integer
+        list1 = list1_1.split(',')
+        for i in range(len(list1)):
+            list1[i] = int(list1[i])
+
+        print(f"The scaled number is: {scale(list1,x)} The sorted sales numbers are: {sort(list1)} The good sales numbers are: {goodSales(list1)}")
+
+    except Exception as e:
+        print(e.args)
